@@ -1,0 +1,105 @@
+{ "items": [
+    {
+        "index": 0,
+        "name": "country",
+        "url": "country",
+        "pages": [
+            {
+                "url": "music-night-awards",
+                "title": "Music Night Awards"
+            },
+            {
+                "url": "country-awards",
+                "title": "Country Award Article"
+            },
+            {
+                "url": "spring-fling",
+                "title": "Spring Fling Article"
+            }
+        ]
+    },
+    {
+        "index": 1,
+        "name": "hip hop",
+        "url": "hip-hop",
+        "pages": [
+            {
+                "url": "music-night-awards",
+                "title": "Music Night Awards"
+            },
+            {
+                "url": "hip-hop-awards",
+                "title": "Hip Hop Awards Article"
+            },
+            {
+                "url": "summer-jam",
+                "title": "Summer Jam Article"
+            },
+            {
+                "url": "record-release-party",
+                "title": "Record Release Party Article"
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "name": "pop",
+        "url": "pop",
+        "pages": [
+            {
+                "url": "music-night-awards",
+                "title": "Music Night Awards"
+            },
+            {
+                "url": "country-awards",
+                "title": "Country Award Article"
+            },
+            {
+                "url": "summer-jam",
+                "title": "Summer Jam Article"
+            },
+            {
+                "url": "record-release-party",
+                "title": "Record Release Party Article"
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "name": "r & b",
+        "url": "r-and-b",
+        "pages": [
+            {
+                "url": "music-night-awards",
+                "title": "Music Night Awards"
+            },
+            {
+                "url": "hip-hop-awards",
+                "title": "Hip Hop Awards Article"
+            },
+            {
+                "url": "summer-jam",
+                "title": "Summer Jam Article"
+            },
+            {
+                "url": "record-release-party",
+                "title": "Record Release Party Article"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "name": "rock n roll",
+        "url": "rock-n-roll",
+        "pages": [
+            {
+                "url": "music-night-awards",
+                "title": "Music Night Awards"
+            },
+            {
+                "url": "spring-fling",
+                "title": "Spring Fling Article"
+            }
+        ]
+    }
+]}
