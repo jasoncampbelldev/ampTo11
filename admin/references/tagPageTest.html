@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tags</title>
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="breadCrumbs"></div>
+	<div id="content"></div>
+</div>
+
+<script>
+
+  	var jsonItems;
+  	var tags = [];
+  	var curUrl = new URL(window.location);
+  	var tagParam = curUrl.searchParams.get("tag");
+  	var urlNoParams = window.location.href.replace(window.location.search, "");
+
+  	function sortTags(tags) {
+  		var sortedTags = [];
+   		for(var tag in tags) {
+  			var tagUrl = tags[tag].url;
+  			sortedTags[tagUrl] = tags[tag];
+  		}
+  		return sortedTags;
+  	}
+
+  	function sortPages(pages) {
+  		var sortedPages = [];
+  		for(var page in pages) {
+  			var pageUrl = pages[page].url;
+  			sortedPages[pageUrl] = pages[page];
+  		}
+  		return sortedPages;
+  	}
+
+  	function printParamTag() {
+  		var htmlCollect = '<div class="oneTag">';
+  		if(tags[tagParam]) {
+  			var tag = tags[tagParam];
+  			document.querySelector("#breadCrumbs").innerHTML = '<a href="' + urlNoParams + '">All Tags</a> >> <span>' + tag.name + '</span>';
+  			htmlCollect += '<h1>' + tag.name + ' <i>Tag</i></h1>';
+  			htmlCollect += '<ul>';
+  			var pages = sortPages(tag.pages);
+  			for(page in pages) {
+  				htmlCollect += '<li><a href="' + pages[page].url + '.html">' + pages[page].title + '</a></li>';
+  			}
+  			htmlCollect += '</ul>';
+  		} else {
+  			htmlCollect += '<h2 class="error">Tag Not Found</h2>'
+  		}
+  		htmlCollect += '</div>';
+  		document.querySelector("#content").innerHTML = htmlCollect;
+  	}
+
+  	function printAllTags() {
+  		var htmlCollect = '<div class="allTags">';
+  		htmlCollect += '<h1>All Tags</h1>';
+  		for(var tag in tags) {
+  			htmlCollect += '<div>';
+  			htmlCollect += '<h2><a href="?tag=' + tags[tag].url + '">' + tags[tag].name + '</a></h2>';
+  			htmlCollect += '<ul>';
+  			var pages = sortPages(tags[tag].pages);
+  			for(var page in pages) {
+  				htmlCollect += '<li><a href="' + pages[page].url + '.html">' + pages[page].title + "</a></li>";
+  			}
+  			htmlCollect += '</ul>';
+  			htmlCollect += '</div>';
+  		}
+  		htmlCollect += '</div>';
+  		document.querySelector("#content").innerHTML = htmlCollect;
+  	}
+
+  	function printPage() {
+  		tags = sortTags(jsonItems);
+
+  		if(tagParam) {
+  			printParamTag();
+  		} else {
+  			printAllTags();
+  		}
+  	}
+
+	fetch("tag.json")
+  	.then(response => response.json())
+  	.then(json => { 
+  		jsonItems = json.items;
+  		printPage();
+  	});
+</script>
+
+</body>
+</html> 

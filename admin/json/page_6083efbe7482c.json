@@ -1,0 +1,159 @@
+{
+    "name": "Record Release Party",
+    "type": "post",
+    "elements": {
+        "6083ba7e8099d": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "content": null,
+            "moduleId": "6083ba96db569",
+            "moduleType": "php",
+            "vars": {
+                "MenuDatabaseID": "607fd336b2d6b",
+                "function": "updateElementVars",
+                "menuDatabaseID": "607fd336b2d6b",
+                "search": "off",
+                "categories": "",
+                "tags": "",
+                "share": ""
+            }
+        },
+        "6083c097e3af4": {
+            "type": "html",
+            "name": "section",
+            "editor": "wysiwyg",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "6083ba7e8099d",
+            "orderNum": 2,
+            "content": "<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn\u2019t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then<\/p>"
+        },
+        "6083c0bc5e412": {
+            "type": "html",
+            "name": "h1",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "6083ba7e8099d",
+            "orderNum": 1,
+            "content": "Record Release Party"
+        },
+        "6084a5ec5a696": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "60847c6e65473",
+            "moduleType": "php",
+            "parentId": "6083ba7e8099d",
+            "orderNum": 0,
+            "vars": {
+                "imageURL": "https:\/\/jtc-art.com\/ampTo11\/images\/large\/record-player-1200x675.jpg",
+                "altText": "record player"
+            }
+        }
+    },
+    "includes": {
+        "6083cd906816b": {
+            "type": "ampJS",
+            "url": "https:\/\/cdn.ampproject.org\/v0\/amp-social-share-0.1.js",
+            "customElement": "amp-social-share"
+        }
+    },
+    "jsonLd": {
+        "type": "article",
+        "headline": "Record Release Party",
+        "author": "Jane Doe",
+        "publisher": "Amp To 11",
+        "publisherLogo": "https:\/\/jtc-art.com\/ampTo11\/images\/ampTo11-logo.png",
+        "image1x1": "https:\/\/jtc-art.com\/ampTo11\/images\/record-player-1200x1200.jpg",
+        "image4x3": "https:\/\/jtc-art.com\/ampTo11\/images\/record-player-1200x900.jpg",
+        "image16x9": "https:\/\/jtc-art.com\/ampTo11\/images\/record-player-1200x675.jpg"
+    },
+    "seoTitle": "Record Release Party Article",
+    "seoDescription": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. ",
+    "pubDate": "2021-05-31",
+    "customFields": {
+        "displayImage": "https:\/\/jtc-art.com\/ampTo11\/images\/medium\/audio-gear-1200x675.jpg",
+        "displayImageAltText": "audio gear"
+    },
+    "metaTags": {
+        "6083ecaa03d93": {
+            "name": "og:type",
+            "type": "property",
+            "value": "article",
+            "editor": "text"
+        },
+        "6083ecf898509": {
+            "name": "og:title",
+            "type": "property",
+            "value": "Record Release Party ",
+            "editor": "text"
+        },
+        "6083ed29d8338": {
+            "name": "og:description",
+            "type": "property",
+            "value": "A fake article about a Record Release Party .",
+            "editor": "text"
+        },
+        "6083ed510cc5f": {
+            "name": "og:image",
+            "type": "property",
+            "value": "https:\/\/jtc-art.com\/ampTo11\/images\/record-player-1200x900.jpg",
+            "editor": "image"
+        }
+    },
+    "publishedElements": {
+        "6083ba7e8099d": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "content": null,
+            "moduleId": "6083ba96db569",
+            "moduleType": "php",
+            "vars": {
+                "MenuDatabaseID": "607fd336b2d6b",
+                "function": "updateElementVars",
+                "menuDatabaseID": "607fd336b2d6b",
+                "search": "off",
+                "categories": "",
+                "tags": "",
+                "share": ""
+            }
+        },
+        "6083c097e3af4": {
+            "type": "html",
+            "name": "section",
+            "editor": "wysiwyg",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "6083ba7e8099d",
+            "orderNum": 2,
+            "content": "<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn\u2019t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then<\/p>"
+        },
+        "6083c0bc5e412": {
+            "type": "html",
+            "name": "h1",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "6083ba7e8099d",
+            "orderNum": 1,
+            "content": "Record Release Party"
+        },
+        "6084a5ec5a696": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "60847c6e65473",
+            "moduleType": "php",
+            "parentId": "6083ba7e8099d",
+            "orderNum": 0,
+            "vars": {
+                "imageURL": "https:\/\/jtc-art.com\/ampTo11\/images\/large\/record-player-1200x675.jpg",
+                "altText": "record player"
+            }
+        }
+    },
+    "modDate": "2021-04-25T01:23:33+00:00"
+}

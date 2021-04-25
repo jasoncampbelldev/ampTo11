@@ -1,0 +1,185 @@
+{
+    "category_array": {
+        "6083b8cb6cd5d": {
+            "name": "Concerts",
+            "url": "concerts",
+            "parentId": ""
+        },
+        "6083b8df2727b": {
+            "name": "Album Releases",
+            "url": "album-releases",
+            "parentId": ""
+        },
+        "6083b9050a06b": {
+            "name": "Live",
+            "url": "live-concerts",
+            "parentId": "6083b8cb6cd5d"
+        },
+        "6083b9195e2b5": {
+            "name": "Virtual",
+            "url": "virtual-concerts",
+            "parentId": "6083b8cb6cd5d"
+        },
+        "6083b960e0eda": {
+            "name": "Awards",
+            "url": "awards",
+            "parentId": ""
+        },
+        "6083b98121f8d": {
+            "name": "Web",
+            "url": "web-concerts",
+            "parentId": "6083b9195e2b5"
+        },
+        "6083b99ce2f6d": {
+            "name": "Streaming",
+            "url": "streaming-concerts",
+            "parentId": "6083b9195e2b5"
+        }
+    },
+    "tag_array": {
+        "6083b9c459541": {
+            "name": "pop",
+            "url": "pop"
+        },
+        "6083b9d3a525b": {
+            "name": "rock n roll",
+            "url": "rock-n-roll"
+        },
+        "6083b9fc74dec": {
+            "name": "r & b",
+            "url": "r-and-b"
+        },
+        "6083ba07a5095": {
+            "name": "country",
+            "url": "country"
+        },
+        "6083ba13b8f1d": {
+            "name": "hip hop",
+            "url": "hip-hop"
+        }
+    },
+    "category_lookup_array": {
+        "6083ec162c848": {
+            "categoryId": "6083b960e0eda",
+            "pageId": "6083ba7e80a4a"
+        },
+        "6083f0a0d5243": {
+            "categoryId": "6083b960e0eda",
+            "pageId": "6083ef4143760"
+        },
+        "6083f0a8df840": {
+            "categoryId": "6083b99ce2f6d",
+            "pageId": "6083ef4143760"
+        },
+        "6083f160eeed7": {
+            "categoryId": "6083b960e0eda",
+            "pageId": "6083ef7280dc4"
+        },
+        "6083f169d2bb5": {
+            "categoryId": "6083b98121f8d",
+            "pageId": "6083ef7280dc4"
+        },
+        "6083f17863fa2": {
+            "categoryId": "6083b9050a06b",
+            "pageId": "6083ef7280dc4"
+        },
+        "6083f1ebd1b4f": {
+            "categoryId": "6083b8cb6cd5d",
+            "pageId": "6083ef838599d"
+        },
+        "6083f1f2cd419": {
+            "categoryId": "6083b9050a06b",
+            "pageId": "6083ef838599d"
+        },
+        "6083f2f868bc7": {
+            "categoryId": "6083b8cb6cd5d",
+            "pageId": "6083ef96f1291"
+        },
+        "6083f2fbb33b6": {
+            "categoryId": "6083b9050a06b",
+            "pageId": "6083ef96f1291"
+        },
+        "6083f3c741bb1": {
+            "categoryId": "6083b99ce2f6d",
+            "pageId": "6083efbe76c3f"
+        },
+        "6083f3cb9404d": {
+            "categoryId": "6083b9195e2b5",
+            "pageId": "6083efbe76c3f"
+        },
+        "60849f95054b9": {
+            "categoryId": "6083b8df2727b",
+            "pageId": "6083efbe76c3f"
+        }
+    },
+    "tag_lookup_array": {
+        "6083ec1f97ce6": {
+            "tagId": "6083b9c459541",
+            "pageId": "6083ba7e80a4a"
+        },
+        "6083ec27129a8": {
+            "tagId": "6083ba07a5095",
+            "pageId": "6083ba7e80a4a"
+        },
+        "6083ec29ba92f": {
+            "tagId": "6083ba13b8f1d",
+            "pageId": "6083ba7e80a4a"
+        },
+        "6083ec2dc25b0": {
+            "tagId": "6083b9fc74dec",
+            "pageId": "6083ba7e80a4a"
+        },
+        "6083ec3065495": {
+            "tagId": "6083b9d3a525b",
+            "pageId": "6083ba7e80a4a"
+        },
+        "6083f0ada227e": {
+            "tagId": "6083ba13b8f1d",
+            "pageId": "6083ef4143760"
+        },
+        "6083f0b0cdf78": {
+            "tagId": "6083b9fc74dec",
+            "pageId": "6083ef4143760"
+        },
+        "6083f17e6d54b": {
+            "tagId": "6083ba07a5095",
+            "pageId": "6083ef7280dc4"
+        },
+        "6083f1824910d": {
+            "tagId": "6083b9c459541",
+            "pageId": "6083ef7280dc4"
+        },
+        "6083f1f76bbcf": {
+            "tagId": "6083ba13b8f1d",
+            "pageId": "6083ef838599d"
+        },
+        "6083f1fa55165": {
+            "tagId": "6083b9fc74dec",
+            "pageId": "6083ef838599d"
+        },
+        "6083f1fd4d752": {
+            "tagId": "6083b9c459541",
+            "pageId": "6083ef838599d"
+        },
+        "6083f30132f43": {
+            "tagId": "6083ba07a5095",
+            "pageId": "6083ef96f1291"
+        },
+        "6083f304f4216": {
+            "tagId": "6083b9d3a525b",
+            "pageId": "6083ef96f1291"
+        },
+        "6083f3d38fd90": {
+            "tagId": "6083ba13b8f1d",
+            "pageId": "6083efbe76c3f"
+        },
+        "6083f3d73ea58": {
+            "tagId": "6083b9fc74dec",
+            "pageId": "6083efbe76c3f"
+        },
+        "6083f3d9e7268": {
+            "tagId": "6083b9c459541",
+            "pageId": "6083efbe76c3f"
+        }
+    }
+}

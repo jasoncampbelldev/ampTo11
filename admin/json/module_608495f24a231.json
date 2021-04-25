@@ -1,0 +1,47 @@
+{
+    "name": "CTA Template",
+    "elements": {
+        "608495f24bad5": {
+            "type": "html",
+            "name": "div",
+            "editor": "textField",
+            "content": "",
+            "moduleId": null,
+            "moduleType": null,
+            "attrs": {
+                "class": "cta"
+            }
+        },
+        "6084b35c709e4": {
+            "type": "html",
+            "name": "h2",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "608495f24bad5",
+            "orderNum": 0,
+            "content": "{{title}}"
+        },
+        "6084b381b08a0": {
+            "type": "html",
+            "name": "p",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "608495f24bad5",
+            "orderNum": 1,
+            "content": "{{description}}"
+        },
+        "6084b3d37c6a9": {
+            "type": "html",
+            "name": "",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "608495f24bad5",
+            "orderNum": 2,
+            "content": "<a class=\"button invert\" href=\"{{buttonLink}}\">{{buttonText}}<\/a>",
+            "attrs": []
+        }
+    }
+}

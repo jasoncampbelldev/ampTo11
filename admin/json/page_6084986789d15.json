@@ -1,0 +1,106 @@
+{
+    "name": "search",
+    "type": "page",
+    "elements": {
+        "608498678b9d2": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "content": null,
+            "moduleId": "6083ba96db569",
+            "moduleType": "php",
+            "vars": {
+                "menuDatabaseID": "607fd336b2d6b",
+                "share": "off",
+                "categories": "",
+                "tags": ""
+            }
+        },
+        "6084997178a9d": {
+            "type": "html",
+            "name": "div",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "608498678b9d2",
+            "orderNum": 0,
+            "content": "",
+            "attrs": {
+                "id": "content"
+            }
+        },
+        "60849d3cd94c0": {
+            "type": "html",
+            "name": "h2",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "6084997178a9d",
+            "orderNum": 0,
+            "content": "Search Results"
+        },
+        "60849d6142cef": {
+            "type": "html",
+            "name": "",
+            "editor": "textArea",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "6084997178a9d",
+            "orderNum": 1,
+            "content": "<div id=\"status\"><\/div>\r\n<div id=\"pages\"><\/div>\r\n<div id=\"tags\"><\/div>\r\n<div id=\"categories\"><\/div>"
+        }
+    },
+    "seoTitle": "Search",
+    "js": "  var jsonFetchCountTotal = 3; \/\/total number of json file fetches (located at button of this script)\r\n  var jsonFetchCount = 0; \r\n  var totalResults = 0;\r\n  var pageJsonItems;\r\n\tvar tagJsonItems;\r\n  var categoryJsonItems;\r\n\tvar results = [];\r\n\tvar curUrl = new URL(window.location);\r\n\tvar queryParam = curUrl.searchParams.get(\"search\").toLowerCase().trim();\r\n\r\n  function searchStr(str) {\r\n    var str = str.toLowerCase().trim();\r\n    var queryParamArray = queryParam.toLowerCase().trim().split(\" \");\r\n    for (var i = 0; i < queryParamArray.length; i++) {\r\n      if (str.toLowerCase().trim().includes(queryParamArray[i])) {\r\n        return true;\r\n      }\r\n    }\r\n    return false;\r\n  }\r\n\r\n\tfunction sortTags(tags) {\r\n\t\tvar sortedTags = [];\r\n \t\tfor (var tag in tags) {\r\n\t\t\tvar tagUrl = tags[tag].url;\r\n\t\t\tsortedTags[tagUrl] = tags[tag];\r\n\t\t}\r\n\t\treturn sortedTags;\r\n\t}\r\n\r\n  function sortCategories(categories) {\r\n    var sortedCategories = [];\r\n    for(var category in categories) {\r\n      var categoryUrl = categories[category].url;\r\n      sortedCategories[categoryUrl] = categories[category];\r\n    }\r\n    return sortedCategories;\r\n  }\r\n\r\n\tfunction sortPages(pages) {\r\n\t\tvar sortedPages = [];\r\n\t\tfor (var page in pages) {\r\n\t\t\tvar pageUrl = pages[page].url;\r\n\t\t\tsortedPages[pageUrl] = pages[page];\r\n\t\t}\r\n\t\treturn sortedPages;\r\n\t}\r\n\r\n\r\n  function printPages() {\r\n    var pages = sortPages(pageJsonItems);\r\n    var resultCount = 0;\r\n    var htmlCollect = '<h2>Pages<\/h2>';\r\n    for (var page in pages) {\r\n      if (searchStr(pages[page].title) || searchStr(pages[page].description)) {\r\n        htmlCollect += '<div>';\r\n        htmlCollect += '<a href=\"' + pages[page].url + '.html\"><span class=\"text\">' + pages[page].title + \"<\/span><\/a>\";\r\n        if (pages[page].description) {\r\n          htmlCollect += '<p><span class=\"text\">' + pages[page].description + '<\/span><\/p>';\r\n        }\r\n        htmlCollect += '<\/div>';\r\n        resultCount++;\r\n        totalResults++;\r\n      }\r\n    }\r\n    if (resultCount > 0) {\r\n      document.querySelector(\"#pages\").innerHTML = htmlCollect;\r\n    }\r\n  }\r\n\r\n\tfunction printTags() {\r\n    tags = sortTags(tagJsonItems);\r\n    var resultCount = 0;\r\n\t\tvar htmlCollect;\r\n    var htmlCollect = '<h2>Tags<\/h2>';\r\n\t\tfor (var tag in tags) {\r\n      if (searchStr(tags[tag].name)) {\r\n  \t\t\thtmlCollect += '<div>';\r\n  \t\t\thtmlCollect += '<h3>' + tags[tag].name + '<\/h3>';\r\n  \t\t\thtmlCollect += '<ul>';\r\n  \t\t\tvar pages = sortPages(tags[tag].pages);\r\n  \t\t\tfor (var page in pages) {\r\n  \t\t\t\thtmlCollect += '<li><a href=\"' + pages[page].url + '.html\"><span class=\"text\">' + pages[page].title + \"<\/span><\/a><\/li>\";\r\n  \t\t\t}\r\n  \t\t\thtmlCollect += '<\/ul>';\r\n  \t\t\thtmlCollect += '<\/div>';\r\n        resultCount++;\r\n        totalResults++;\r\n      }\r\n\t\t}\r\n    if (resultCount > 0) {\r\n      document.querySelector(\"#tags\").innerHTML = htmlCollect;\r\n    }\r\n\t}\r\n\r\n  function printCategories() {\r\n    categories = sortCategories(categoryJsonItems);\r\n    var resultCount = 0;\r\n    var htmlCollect = '<h2>Categories<\/h2>';\r\n    for (var category in categories) {\r\n      if (searchStr(categories[category].name)) {\r\n        htmlCollect += '<div>';\r\n        htmlCollect += '<h3>' + categories[category].name + '<\/h3>';\r\n        htmlCollect += '<ul>';\r\n        var pages = sortPages(categories[category].pages);\r\n        for (var page in pages) {\r\n          htmlCollect += '<li><a href=\"' + pages[page].url + '.html\"><span class=\"text\">' + pages[page].title + \"<\/span><\/a><\/li>\";\r\n        }\r\n        htmlCollect += '<\/ul>';\r\n        htmlCollect += '<\/div>';\r\n        resultCount++;\r\n        totalResults++;\r\n      }\r\n    }\r\n    if (resultCount > 0) {\r\n      document.querySelector(\"#categories\").innerHTML = htmlCollect;\r\n    }\r\n  }\r\n\r\n  function hightlightSearchWords() {\r\n    var queryParamArray = queryParam.toLowerCase().trim().split(\" \");\r\n    for (var i = 0; i < queryParamArray.length; i++) {\r\n      var keyword = queryParamArray[i];\r\n      var keywordRegEx = new RegExp(keyword, \"ig\");\r\n      var textSpans = document.querySelectorAll(\"span.text\");\r\n      for (var j = 1; j < textSpans.length; j++) {\r\n        var marked = textSpans[j].innerHTML.replace(keywordRegEx,\"<mark>\" + keyword + \"<\/mark>\");\r\n        textSpans[j].innerHTML = marked;\r\n      }\r\n    }\r\n  }\r\n\r\n  function fetchCount() {\r\n    jsonFetchCount++;\r\n    if (jsonFetchCount == jsonFetchCountTotal) {\r\n      if (totalResults == 0) {\r\n        document.querySelector(\"#status\").innerHTML = \"No results found.\";\r\n      } else {\r\n        hightlightSearchWords();\r\n      }\r\n    }\r\n  }\r\n\r\n\tfetch(\"page.json\")\r\n  \t.then(response => {\r\n      if (response.ok) {\r\n        return response.json();\r\n      } else {\r\n        throw new Error('failed to fetch page.json');\r\n      }\r\n    })\r\n  \t.then(json => { \r\n  \t\tpageJsonItems = json.items;\r\n  \t\tprintPages();\r\n      fetchCount();\r\n  \t})\r\n    .catch((error) => {\r\n      console.log(error);\r\n      fetchCount();\r\n    });\r\n\r\n  fetch(\"tag.json\")\r\n    .then(response => {\r\n      if (response.ok) {\r\n        return response.json();\r\n      } else {\r\n        throw new Error('failed to fetch tag.json');\r\n      }\r\n    })\r\n    .then(json => { \r\n      tagJsonItems = json.items;\r\n      printTags();\r\n      fetchCount();\r\n    })\r\n    .catch((error) => {\r\n      console.log(error);\r\n      fetchCount();\r\n    });\r\n\r\n  fetch(\"category.json\")\r\n    .then(response => {\r\n      if (response.ok) {\r\n        return response.json();\r\n      } else {\r\n        throw new Error('failed to fetch category.json');\r\n      }\r\n    })\r\n    .then(json => { \r\n      categoryJsonItems = json.items;\r\n      printCategories();\r\n      fetchCount();\r\n    })\r\n    .catch((error) => {\r\n      console.log(error);\r\n      fetchCount();\r\n    });",
+    "css": "mark { background: yellow; }",
+    "publishedElements": {
+        "608498678b9d2": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "content": null,
+            "moduleId": "6083ba96db569",
+            "moduleType": "php",
+            "vars": {
+                "menuDatabaseID": "607fd336b2d6b",
+                "share": "off",
+                "categories": "",
+                "tags": ""
+            }
+        },
+        "6084997178a9d": {
+            "type": "html",
+            "name": "div",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "608498678b9d2",
+            "orderNum": 0,
+            "content": "",
+            "attrs": {
+                "id": "content"
+            }
+        },
+        "60849d3cd94c0": {
+            "type": "html",
+            "name": "h2",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "6084997178a9d",
+            "orderNum": 0,
+            "content": "Search Results"
+        },
+        "60849d6142cef": {
+            "type": "html",
+            "name": "",
+            "editor": "textArea",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "6084997178a9d",
+            "orderNum": 1,
+            "content": "<div id=\"status\"><\/div>\r\n<div id=\"pages\"><\/div>\r\n<div id=\"tags\"><\/div>\r\n<div id=\"categories\"><\/div>"
+        }
+    },
+    "modDate": "2021-04-25T01:23:27+00:00"
+}

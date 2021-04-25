@@ -1,0 +1,53 @@
+{
+    "globalCSS": "body { color: #333333; font-family: Helvetica, Tahoma, sans-serif; }\r\na { color: #0b5e8a; }\r\nul { padding-left: 15px; }\r\n.categoryList li { font-size: 1.2em; line-height: 1.4em; }\r\n.tagList li { display: inline-block; font-size: 1.2em; }\r\n.tagList li a { text-decoration: none; border: solid 1px #ccc; border-radius: 10px; padding: 3px 10px; margin: 3px; display: block; }\r\n.cta { background: linear-gradient(to bottom, #222d35 0%,#445359 100%); padding: 10px 20px 20px; color: #fff; }",
+    "urlBase": "https:\/\/jtc-art.com\/ampTo11",
+    "includes": {
+        "607686ad8094e": {
+            "type": "ampJS",
+            "url": "https:\/\/cdn.ampproject.org\/v0\/amp-sidebar-0.1.js",
+            "customElement": "amp-sidebar"
+        },
+        "60768b8556ad0": {
+            "type": "css",
+            "url": "https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.4.1\/css\/bootstrap.min.css",
+            "customElement": ""
+        },
+        "60768bb5ec0f3": {
+            "type": "js",
+            "url": "https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/3.5.1\/jquery.min.js",
+            "customElement": ""
+        },
+        "60768bd714dee": {
+            "type": "js",
+            "url": "https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.4.1\/js\/bootstrap.min.js",
+            "customElement": ""
+        }
+    },
+    "globalIncludes": {
+        "6076a1fe2ead9": {
+            "type": "ampJS",
+            "url": "https:\/\/cdn.ampproject.org\/v0\/amp-sidebar-0.1.js",
+            "customElement": "amp-sidebar"
+        },
+        "607b82dd91b4f": {
+            "type": "css",
+            "url": "https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.4.1\/css\/bootstrap.min.css",
+            "customElement": ""
+        },
+        "607b82f7a7ffd": {
+            "type": "js",
+            "url": "https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/3.5.1\/jquery.min.js",
+            "customElement": ""
+        },
+        "607b83e25a3cc": {
+            "type": "jsFooter",
+            "url": "https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.4.1\/js\/bootstrap.min.js",
+            "customElement": ""
+        },
+        "6083d082e9f9a": {
+            "type": "ampJS",
+            "url": "https:\/\/cdn.ampproject.org\/v0\/amp-form-0.1.js",
+            "customElement": "amp-form"
+        }
+    }
+}

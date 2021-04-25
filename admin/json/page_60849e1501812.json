@@ -1,0 +1,92 @@
+{
+    "name": "categories",
+    "type": "page",
+    "elements": {
+        "608498678b9d2": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "content": null,
+            "moduleId": "6083ba96db569",
+            "moduleType": "php",
+            "vars": {
+                "menuDatabaseID": "607fd336b2d6b",
+                "share": "off",
+                "categories": "",
+                "tags": ""
+            }
+        },
+        "6084997178a9d": {
+            "type": "html",
+            "name": "div",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "608498678b9d2",
+            "orderNum": 1,
+            "content": "",
+            "attrs": {
+                "id": "content"
+            }
+        },
+        "60849d6142cef": {
+            "type": "html",
+            "name": "div",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "608498678b9d2",
+            "orderNum": 0,
+            "content": "",
+            "attrs": {
+                "id": "breadCrumbs"
+            }
+        }
+    },
+    "seoTitle": "Categories",
+    "js": "\tvar jsonItems;\r\n\tvar categories = [];\r\n\tvar curUrl = new URL(window.location);\r\n\tvar categoryParam = curUrl.searchParams.get(\"category\");\r\n\tvar urlNoParams = window.location.href.replace(window.location.search, \"\");\r\n\r\n\tfunction sortCategories(categories) {\r\n\t\tvar sortedCategories = [];\r\n \t\tfor(var category in categories) {\r\n\t\t\tvar categoryUrl = categories[category].url;\r\n\t\t\tsortedCategories[categoryUrl] = categories[category];\r\n\t\t}\r\n\t\treturn sortedCategories;\r\n\t}\r\n\r\n\tfunction sortPages(pages) {\r\n\t\tvar sortedPages = [];\r\n\t\tfor(var page in pages) {\r\n\t\t\tvar pageUrl = pages[page].url;\r\n\t\t\tsortedPages[pageUrl] = pages[page];\r\n\t\t}\r\n\t\treturn sortedPages;\r\n\t}\r\n\r\n\tfunction printParamCategory() {\r\n\t\tvar htmlCollect = '<div class=\"oneCategory\">';\r\n\t\tif(categories[categoryParam]) {\r\n\t\t\tvar category = categories[categoryParam];\r\n\t\t\tdocument.querySelector(\"#breadCrumbs\").innerHTML = '<a href=\"' + urlNoParams + '\">All Tags<\/a> >> <span>' + category.name + '<\/span>';\r\n\t\t\thtmlCollect += '<h1>' + category.name + ' <i>Category<\/i><\/h1>';\r\n\t\t\thtmlCollect += '<ul>';\r\n\t\t\tvar pages = sortPages(category.pages);\r\n\t\t\tfor(page in pages) {\r\n\t\t\t\thtmlCollect += '<li><a href=\"' + pages[page].url + '.html\">' + pages[page].title + '<\/a><\/li>';\r\n\t\t\t}\r\n\t\t\thtmlCollect += '<\/ul>';\r\n\t\t} else {\r\n\t\t\thtmlCollect += '<h2 class=\"error\">Category Not Found<\/h2>'\r\n\t\t}\r\n\t\thtmlCollect += '<\/div>';\r\n\t\tdocument.querySelector(\"#content\").innerHTML = htmlCollect;\r\n\t}\r\n\r\n\tfunction printAllCategories() {\r\n\t\tvar htmlCollect = '<div class=\"allCategories\">';\r\n\t\thtmlCollect += '<h1>All Categories<\/h1>';\r\n\t\tfor(var category in categories) {\r\n\t\t\thtmlCollect += '<div>';\r\n\t\t\thtmlCollect += '<h2><a href=\"?category=' + categories[category].url + '\">' + categories[category].name + '<\/a><\/h2>';\r\n\t\t\thtmlCollect += '<ul>';\r\n\t\t\tvar pages = sortPages(categories[category].pages);\r\n\t\t\tfor(var page in pages) {\r\n\t\t\t\thtmlCollect += '<li><a href=\"' + pages[page].url + '.html\">' + pages[page].title + \"<\/a><\/li>\";\r\n\t\t\t}\r\n\t\t\thtmlCollect += '<\/ul>';\r\n\t\t\thtmlCollect += '<\/div>';\r\n\t\t}\r\n\t\thtmlCollect += '<\/div>';\r\n\t\tdocument.querySelector(\"#content\").innerHTML = htmlCollect;\r\n\t}\r\n\r\n\tfunction printPage() {\r\n\t\tcategories = sortCategories(jsonItems);\r\n\r\n\t\tif(categoryParam) {\r\n\t\t\tprintParamCategory();\r\n\t\t} else {\r\n\t\t\tprintAllCategories();\r\n\t\t}\r\n\t}\r\n\r\n\tfetch(\"category.json\")\r\n  \t.then(response => response.json())\r\n  \t.then(json => { \r\n  \t\tjsonItems = json.items;\r\n  \t\tprintPage();\r\n  \t});",
+    "css": "",
+    "publishedElements": {
+        "608498678b9d2": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "content": null,
+            "moduleId": "6083ba96db569",
+            "moduleType": "php",
+            "vars": {
+                "menuDatabaseID": "607fd336b2d6b",
+                "share": "off",
+                "categories": "",
+                "tags": ""
+            }
+        },
+        "6084997178a9d": {
+            "type": "html",
+            "name": "div",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "608498678b9d2",
+            "orderNum": 1,
+            "content": "",
+            "attrs": {
+                "id": "content"
+            }
+        },
+        "60849d6142cef": {
+            "type": "html",
+            "name": "div",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "608498678b9d2",
+            "orderNum": 0,
+            "content": "",
+            "attrs": {
+                "id": "breadCrumbs"
+            }
+        }
+    },
+    "modDate": "2021-04-25T01:23:26+00:00"
+}

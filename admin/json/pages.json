@@ -1,0 +1,76 @@
+{
+    "page_array": {
+        "607fdb51729b6": {
+            "name": "Home",
+            "type": "page",
+            "file": "page_607fdb517277e",
+            "url": "index"
+        },
+        "607fdcdb43dbe": {
+            "name": "About",
+            "type": "page",
+            "file": "page_607fdcdb41a92",
+            "url": "about"
+        },
+        "6083ba7e80a4a": {
+            "name": "Music Night Awards",
+            "type": "post",
+            "file": "page_6083ba7e7e749",
+            "url": "music-night-awards"
+        },
+        "6083ef4143760": {
+            "name": "Hip Hop Awards",
+            "type": "post",
+            "file": "page_6083ef41412a7",
+            "url": "hip-hop-awards"
+        },
+        "6083ef7280dc4": {
+            "name": "Country Awards",
+            "type": "post",
+            "file": "page_6083ef727f158",
+            "url": "country-awards"
+        },
+        "6083ef838599d": {
+            "name": "Summer Jam",
+            "type": "post",
+            "file": "page_6083ef8385826",
+            "url": "summer-jam"
+        },
+        "6083ef96f1291": {
+            "name": "Spring Fling",
+            "type": "post",
+            "file": "page_6083ef96ef8c0",
+            "url": "spring-fling"
+        },
+        "6083efbe76c3f": {
+            "name": "Record Release Party",
+            "type": "post",
+            "file": "page_6083efbe7482c",
+            "url": "record-release-party"
+        },
+        "60846ed5e847e": {
+            "name": "Music Videos",
+            "type": "database_template",
+            "file": "page_60846ed5e8109",
+            "url": "music-videos"
+        },
+        "608498678ba59": {
+            "name": "search",
+            "type": "page",
+            "file": "page_6084986789d15",
+            "url": "search"
+        },
+        "60849e1503148": {
+            "name": "categories",
+            "type": "page",
+            "file": "page_60849e1501812",
+            "url": "categories"
+        },
+        "60849fc995573": {
+            "name": "tags",
+            "type": "page",
+            "file": "page_60849fc9930ae",
+            "url": "tags"
+        }
+    }
+}

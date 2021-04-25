@@ -1,0 +1,9 @@
+{
+    "name": "DB to CTAs",
+    "elements": {
+        "60846f2924654": {
+            "type": ""
+        }
+    },
+    "functionName": "dbToCTAs"
+}

@@ -1,0 +1,193 @@
+{
+    "name": "Home",
+    "type": "page",
+    "elements": {
+        "607fdb5172906": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "content": null,
+            "moduleId": "607fc9931755a",
+            "moduleType": "php",
+            "vars": {
+                "DatabaseID": "607fd336b2d6b",
+                "function": "updateElementVars",
+                "menuDatabaseID": "607fd336b2d6b"
+            }
+        },
+        "607fdc4277d3e": {
+            "type": "html",
+            "name": "h1",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "607fdb5172906",
+            "orderNum": 0,
+            "content": "Home",
+            "attrs": {
+                "class": "sreaders-only"
+            }
+        },
+        "607fdc6eaa2e4": {
+            "type": "html",
+            "name": "section",
+            "editor": "wysiwyg",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "607fdb5172906",
+            "orderNum": 2,
+            "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,<\/p>"
+        },
+        "60848b2ceefaa": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "6083f6cdaa8fd",
+            "moduleType": "php",
+            "parentId": "607fdb5172906",
+            "orderNum": 1,
+            "vars": {
+                "limit": ""
+            }
+        },
+        "60848cdd1fb3e": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "60846f2924760",
+            "moduleType": "php",
+            "parentId": "607fdb5172906",
+            "orderNum": 5,
+            "vars": {
+                "databaseID": "608464945a661",
+                "databasePageUrl": "music-videos",
+                "titleVar": "title",
+                "descriptionVar": "artist",
+                "linkText": "Watch Now",
+                "imageUrlVar": "imageUrl",
+                "imageAltText": "imageAltText",
+                "imageAltTextVar": "imageAltText"
+            }
+        },
+        "60848d355c60c": {
+            "type": "html",
+            "name": "h2",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "607fdb5172906",
+            "orderNum": 4,
+            "content": "Music Videos Database"
+        },
+        "6084b4a7a252b": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "608495f24bb61",
+            "moduleType": "html",
+            "parentId": "607fdb5172906",
+            "orderNum": 3,
+            "vars": {
+                "title": "About Page",
+                "description": "Don't miss our exciting About Page!",
+                "buttonLink": "[%url%]\/about.html",
+                "buttonText": "Learn More"
+            }
+        }
+    },
+    "publishedElements": {
+        "607fdb5172906": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "content": null,
+            "moduleId": "607fc9931755a",
+            "moduleType": "php",
+            "vars": {
+                "DatabaseID": "607fd336b2d6b",
+                "function": "updateElementVars",
+                "menuDatabaseID": "607fd336b2d6b"
+            }
+        },
+        "607fdc4277d3e": {
+            "type": "html",
+            "name": "h1",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "607fdb5172906",
+            "orderNum": 0,
+            "content": "Home",
+            "attrs": {
+                "class": "sreaders-only"
+            }
+        },
+        "607fdc6eaa2e4": {
+            "type": "html",
+            "name": "section",
+            "editor": "wysiwyg",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "607fdb5172906",
+            "orderNum": 2,
+            "content": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,<\/p>"
+        },
+        "60848b2ceefaa": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "6083f6cdaa8fd",
+            "moduleType": "php",
+            "parentId": "607fdb5172906",
+            "orderNum": 1,
+            "vars": {
+                "limit": ""
+            }
+        },
+        "60848cdd1fb3e": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "60846f2924760",
+            "moduleType": "php",
+            "parentId": "607fdb5172906",
+            "orderNum": 5,
+            "vars": {
+                "databaseID": "608464945a661",
+                "databasePageUrl": "music-videos",
+                "titleVar": "title",
+                "descriptionVar": "artist",
+                "linkText": "Watch Now",
+                "imageUrlVar": "imageUrl",
+                "imageAltText": "imageAltText",
+                "imageAltTextVar": "imageAltText"
+            }
+        },
+        "60848d355c60c": {
+            "type": "html",
+            "name": "h2",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "607fdb5172906",
+            "orderNum": 4,
+            "content": "Music Videos Database"
+        },
+        "6084b4a7a252b": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "608495f24bb61",
+            "moduleType": "html",
+            "parentId": "607fdb5172906",
+            "orderNum": 3,
+            "vars": {
+                "title": "About Page",
+                "description": "Don't miss our exciting About Page!",
+                "buttonLink": "[%url%]\/about.html",
+                "buttonText": "Learn More"
+            }
+        }
+    },
+    "modDate": "2021-04-25T01:23:40+00:00"
+}

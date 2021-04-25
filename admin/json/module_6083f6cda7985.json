@@ -1,0 +1,10 @@
+{
+    "name": "Display Posts",
+    "elements": {
+        "6083f6cda9288": {
+            "type": ""
+        }
+    },
+    "functionName": "displayPosts",
+    "description": "Displays Posts by date. Enter a number in the \"limit\" field to limit the amount of posts displayed. "
+}

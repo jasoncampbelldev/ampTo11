@@ -1,0 +1,10 @@
+{
+    "name": "Amp Youtube",
+    "elements": {
+        "60847c623354c": {
+            "type": ""
+        }
+    },
+    "functionName": "ampYoutube",
+    "description": "Displays Amp Youtube video. widthRatio defaults to 560. heightRatio defaults to 315."
+}

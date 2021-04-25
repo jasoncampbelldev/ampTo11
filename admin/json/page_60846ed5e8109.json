@@ -1,0 +1,209 @@
+{
+    "name": "Music Videos",
+    "type": "database_template",
+    "elements": {
+        "60846ed5e829a": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "content": null,
+            "moduleId": "607fc9931755a",
+            "moduleType": "php",
+            "vars": {
+                "menuDatabaseID": "607fd336b2d6b"
+            }
+        },
+        "608470637c4a5": {
+            "type": "html",
+            "name": "h1",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "60846ed5e829a",
+            "orderNum": 0,
+            "content": "{{title}}"
+        },
+        "608474bf8335b": {
+            "type": "html",
+            "name": "section",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "60846ed5e829a",
+            "orderNum": 3,
+            "content": "{{description}}"
+        },
+        "608474ebb0502": {
+            "type": "html",
+            "name": "h2",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "60846ed5e829a",
+            "orderNum": 1,
+            "content": "<i>by<\/i> {{artist}}"
+        },
+        "60847855898c8": {
+            "type": "html",
+            "name": "hr",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "60846ed5e829a",
+            "orderNum": 4
+        },
+        "6084787f8f456": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "60846f2924760",
+            "moduleType": "php",
+            "parentId": "60846ed5e829a",
+            "orderNum": 6,
+            "vars": {
+                "databaseID": "608464945a661",
+                "databasePageUrl": "music-videos",
+                "titleVar": "title",
+                "descriptionVar": "artist",
+                "linkText": "Watch Now",
+                "function": "updateElementVars",
+                "imageUrlVar": "imageUrl",
+                "imageAltTextVar": "imageAltText"
+            }
+        },
+        "608479085f4eb": {
+            "type": "html",
+            "name": "h2",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "60846ed5e829a",
+            "orderNum": 5,
+            "content": "More Videos"
+        },
+        "6084800084c39": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "60847c6236200",
+            "moduleType": "php",
+            "parentId": "60846ed5e829a",
+            "orderNum": 2,
+            "vars": {
+                "youtubeID": "{{youtubeID}}",
+                "maxWidth": "",
+                "widthRatio": "",
+                "heightRatio": "",
+                "function": "updateElementVars"
+            }
+        }
+    },
+    "database": "608464945a661",
+    "seoDescription": "{{title}} by {{artist}}",
+    "seoTitle": "{{title}} Music Video",
+    "includes": {
+        "608480c00d5ba": {
+            "type": "ampJS",
+            "url": "https:\/\/cdn.ampproject.org\/v0\/amp-youtube-0.1.js",
+            "customElement": "amp-youtube"
+        }
+    },
+    "publishedElements": {
+        "60846ed5e829a": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "content": null,
+            "moduleId": "607fc9931755a",
+            "moduleType": "php",
+            "vars": {
+                "menuDatabaseID": "607fd336b2d6b"
+            }
+        },
+        "608470637c4a5": {
+            "type": "html",
+            "name": "h1",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "60846ed5e829a",
+            "orderNum": 0,
+            "content": "{{title}}"
+        },
+        "608474bf8335b": {
+            "type": "html",
+            "name": "section",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "60846ed5e829a",
+            "orderNum": 3,
+            "content": "{{description}}"
+        },
+        "608474ebb0502": {
+            "type": "html",
+            "name": "h2",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "60846ed5e829a",
+            "orderNum": 1,
+            "content": "<i>by<\/i> {{artist}}"
+        },
+        "60847855898c8": {
+            "type": "html",
+            "name": "hr",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "60846ed5e829a",
+            "orderNum": 4
+        },
+        "6084787f8f456": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "60846f2924760",
+            "moduleType": "php",
+            "parentId": "60846ed5e829a",
+            "orderNum": 6,
+            "vars": {
+                "databaseID": "608464945a661",
+                "databasePageUrl": "music-videos",
+                "titleVar": "title",
+                "descriptionVar": "artist",
+                "linkText": "Watch Now",
+                "function": "updateElementVars",
+                "imageUrlVar": "imageUrl",
+                "imageAltTextVar": "imageAltText"
+            }
+        },
+        "608479085f4eb": {
+            "type": "html",
+            "name": "h2",
+            "editor": "textField",
+            "moduleId": null,
+            "moduleType": null,
+            "parentId": "60846ed5e829a",
+            "orderNum": 5,
+            "content": "More Videos"
+        },
+        "6084800084c39": {
+            "type": "module",
+            "name": "",
+            "editor": "textField",
+            "moduleId": "60847c6236200",
+            "moduleType": "php",
+            "parentId": "60846ed5e829a",
+            "orderNum": 2,
+            "vars": {
+                "youtubeID": "{{youtubeID}}",
+                "maxWidth": "",
+                "widthRatio": "",
+                "heightRatio": "",
+                "function": "updateElementVars"
+            }
+        }
+    },
+    "modDate": "2021-04-25T01:23:28+00:00"
+}

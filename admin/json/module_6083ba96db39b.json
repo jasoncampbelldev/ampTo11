@@ -1,0 +1,10 @@
+{
+    "name": "Sidebar Template",
+    "elements": {
+        "6083ba96db4b6": {
+            "type": ""
+        }
+    },
+    "functionName": "sidebarTemplate",
+    "description": "Template with right sidebar. Enter \"off\" in any section field that you don't want to show."
+}

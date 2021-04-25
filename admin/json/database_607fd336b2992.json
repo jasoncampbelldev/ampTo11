@@ -1,0 +1,40 @@
+{
+    "name": "Main Menu",
+    "field_array": {
+        "607fd349bb428": {
+            "name": "link",
+            "editor": "text"
+        },
+        "607fd34f8587f": {
+            "name": "text",
+            "editor": "text"
+        },
+        "607fd3a82720b": {
+            "name": "order",
+            "editor": "text"
+        }
+    },
+    "entry_array": {
+        "607fd37e0ef49": {
+            "link": "about.html",
+            "text": "About",
+            "order": "2"
+        },
+        "607fd395e8875": {
+            "link": "index.html",
+            "text": "Home",
+            "order": "1"
+        },
+        "6084ca2051404": {
+            "link": "categories.html",
+            "text": "Categories",
+            "order": "3"
+        },
+        "6084ca2e3b41a": {
+            "link": "tags.html",
+            "text": "Tags",
+            "order": "4"
+        }
+    },
+    "sortBy": "607fd3a82720b"
+}

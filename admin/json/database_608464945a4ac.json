@@ -1,0 +1,72 @@
+{
+    "name": "Music Videos",
+    "field_array": {
+        "608464945a5c7": {
+            "name": "url",
+            "editor": "text"
+        },
+        "608464fc84746": {
+            "name": "title",
+            "editor": "text"
+        },
+        "6084651221d22": {
+            "name": "youtubeID",
+            "editor": "text"
+        },
+        "608466988446e": {
+            "name": "artist",
+            "editor": "text"
+        },
+        "60846a7388eac": {
+            "name": "description",
+            "editor": "rich_text"
+        },
+        "6084c12c1d88f": {
+            "name": "imageUrl",
+            "editor": "text"
+        },
+        "6084c1342e70f": {
+            "name": "imageAltText",
+            "editor": "text"
+        }
+    },
+    "sortBy": "608464fc84746",
+    "entry_array": {
+        "608466793d20a": {
+            "url": "beatles-help",
+            "title": "Help",
+            "youtubeID": "2Q_ZzBGPdqE",
+            "artist": "The Beatles",
+            "description": "<p>Music video by The Beatles performing Help!. \u00a9 2015 Calderstone Productions Limited (a division of Universal Music Group) \/ Subafilms Ltd<\/p>",
+            "imageUrl": "https:\/\/img.youtube.com\/vi\/2Q_ZzBGPdqE\/0.jpg",
+            "imageAltText": "Help video"
+        },
+        "60846a5d98326": {
+            "url": "the-beatles-hey-jude",
+            "title": "Hey Jude",
+            "youtubeID": "A_MjCqQoLLA",
+            "artist": "The Beatles",
+            "description": "<p>To help with the filming an audience of around 300 local people, as well as some of the fans that gathered regularly outside Abbey Road Studios were brought in for the song\u2019s finale. Their presence had an unlikely upside for The Beatles in their long-running saga with the Musicians\u2019 Union in that the MU were fooled into believing the band were playing live, when in fact they were miming for the vast majority of the song. Paul, however, sang live throughout the song. <\/p><p>The video was first broadcast on David Frost\u2019s Frost On Sunday show, four days after it was filmed. At that point transmission was in black and white although the promo was originally shot in colour. It was first aired in America a month later on 6 October 1968, on The Smotheres Brothers Comedy Hour.<\/p>",
+            "imageUrl": "https:\/\/img.youtube.com\/vi\/A_MjCqQoLLA\/0.jpg",
+            "imageAltText": "Hey Jude video"
+        },
+        "60846bc86c614": {
+            "url": "bob-marley-no-woman-no-cry",
+            "title": "No Woman, No Cry ",
+            "youtubeID": "mZ6VezKMoRY",
+            "artist": "Bob Marley & The Wailers",
+            "description": "<p>Bob Marley &amp; The Wailers \"No Woman, No Cry\" (Live At The Rainbow 4th June 1977), now remastered in HD.<\/p>",
+            "imageUrl": "https:\/\/img.youtube.com\/vi\/mZ6VezKMoRY\/0.jpg",
+            "imageAltText": "No Woman, No Cry video"
+        },
+        "60846d5652168": {
+            "url": "ella-fitzgerald-it-dont-mean-a-thing",
+            "title": "It Don't Mean A Thing",
+            "youtubeID": "myRc-3oF1d0",
+            "artist": "Ella Fitzgerald and Duke Ellington",
+            "description": "<p>Ella Fitzgerald and Duke Ellington \"It Don't Mean A Thing (If It Ain't Got That Swing)\" on The Ed Sullivan Show on March 7, 1965<\/p>",
+            "imageUrl": "https:\/\/img.youtube.com\/vi\/myRc-3oF1d0\/0.jpg",
+            "imageAltText": "It Don't Mean A Thing video"
+        }
+    }
+}

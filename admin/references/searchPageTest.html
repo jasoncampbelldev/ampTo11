@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Results</title>
+  <style>
+    mark { background: yellow; }
+  </style>
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="content">
+    <h1>Search Results</h1>
+    <div id="status"></div>
+    <div id="pages"></div>
+    <div id="tags"></div>
+    <div id="categories"></div>
+  </div>
+</div>
+
+<script>
+
+  var jsonFetchCountTotal = 3; //total number of json file fetches (located at button of this script)
+  var jsonFetchCount = 0; 
+  var totalResults = 0;
+  var pageJsonItems;
+	var tagJsonItems;
+  var categoryJsonItems;
+	var results = [];
+	var curUrl = new URL(window.location);
+	var queryParam = curUrl.searchParams.get("search").toLowerCase().trim();
+
+  function searchStr(str) {
+    var str = str.toLowerCase().trim();
+    var queryParamArray = queryParam.toLowerCase().trim().split(" ");
+    for (var i = 0; i < queryParamArray.length; i++) {
+      if (str.toLowerCase().trim().includes(queryParamArray[i])) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+	function sortTags(tags) {
+		var sortedTags = [];
+ 		for (var tag in tags) {
+			var tagUrl = tags[tag].url;
+			sortedTags[tagUrl] = tags[tag];
+		}
+		return sortedTags;
+	}
+
+  function sortCategories(categories) {
+    var sortedCategories = [];
+    for(var category in categories) {
+      var categoryUrl = categories[category].url;
+      sortedCategories[categoryUrl] = categories[category];
+    }
+    return sortedCategories;
+  }
+
+	function sortPages(pages) {
+		var sortedPages = [];
+		for (var page in pages) {
+			var pageUrl = pages[page].url;
+			sortedPages[pageUrl] = pages[page];
+		}
+		return sortedPages;
+	}
+
+
+  function printPages() {
+    var pages = sortPages(pageJsonItems);
+    var resultCount = 0;
+    var htmlCollect = '<h2>Pages</h2>';
+    for (var page in pages) {
+      if (searchStr(pages[page].title) || searchStr(pages[page].description)) {
+        htmlCollect += '<div>';
+        htmlCollect += '<a href="' + pages[page].url + '.html"><span class="text">' + pages[page].title + "</span></a>";
+        if (pages[page].description) {
+          htmlCollect += '<p><span class="text">' + pages[page].description + '</span></p>';
+        }
+        htmlCollect += '</div>';
+        resultCount++;
+        totalResults++;
+      }
+    }
+    if (resultCount > 0) {
+      document.querySelector("#pages").innerHTML = htmlCollect;
+    }
+  }
+
+	function printTags() {
+    tags = sortTags(tagJsonItems);
+    var resultCount = 0;
+		var htmlCollect;
+    var htmlCollect = '<h2>Tags</h2>';
+		for (var tag in tags) {
+      if (searchStr(tags[tag].name)) {
+  			htmlCollect += '<div>';
+  			htmlCollect += '<h3>' + tags[tag].name + '</h3>';
+  			htmlCollect += '<ul>';
+  			var pages = sortPages(tags[tag].pages);
+  			for (var page in pages) {
+  				htmlCollect += '<li><a href="' + pages[page].url + '.html"><span class="text">' + pages[page].title + "</span></a></li>";
+  			}
+  			htmlCollect += '</ul>';
+  			htmlCollect += '</div>';
+        resultCount++;
+        totalResults++;
+      }
+		}
+    if (resultCount > 0) {
+      document.querySelector("#tags").innerHTML = htmlCollect;
+    }
+	}
+
+  function printCategories() {
+    categories = sortCategories(categoryJsonItems);
+    var resultCount = 0;
+    var htmlCollect = '<h2>Categories</h2>';
+    for (var category in categories) {
+      if (searchStr(categories[category].name)) {
+        htmlCollect += '<div>';
+        htmlCollect += '<h3>' + categories[category].name + '</h3>';
+        htmlCollect += '<ul>';
+        var pages = sortPages(categories[category].pages);
+        for (var page in pages) {
+          htmlCollect += '<li><a href="' + pages[page].url + '.html"><span class="text">' + pages[page].title + "</span></a></li>";
+        }
+        htmlCollect += '</ul>';
+        htmlCollect += '</div>';
+        resultCount++;
+        totalResults++;
+      }
+    }
+    if (resultCount > 0) {
+      document.querySelector("#categories").innerHTML = htmlCollect;
+    }
+  }
+
+  function hightlightSearchWords() {
+    var queryParamArray = queryParam.toLowerCase().trim().split(" ");
+    for (var i = 0; i < queryParamArray.length; i++) {
+      var keyword = queryParamArray[i];
+      var keywordRegEx = new RegExp(keyword, "ig");
+      var textSpans = document.querySelectorAll("span.text");
+      for (var j = 1; j < textSpans.length; j++) {
+        var marked = textSpans[j].innerHTML.replace(keywordRegEx,"<mark>" + keyword + "</mark>");
+        textSpans[j].innerHTML = marked;
+      }
+    }
+  }
+
+  function fetchCount() {
+    jsonFetchCount++;
+    if (jsonFetchCount == jsonFetchCountTotal) {
+      if (totalResults == 0) {
+        document.querySelector("#status").innerHTML = "No results found.";
+      } else {
+        hightlightSearchWords();
+      }
+    }
+  }
+
+	fetch("page.json")
+  	.then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('failed to fetch page.json');
+      }
+    })
+  	.then(json => { 
+  		pageJsonItems = json.items;
+  		printPages();
+      fetchCount();
+  	})
+    .catch((error) => {
+      console.log(error);
+      fetchCount();
+    });
+
+  fetch("tag.json")
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('failed to fetch tag.json');
+      }
+    })
+    .then(json => { 
+      tagJsonItems = json.items;
+      printTags();
+      fetchCount();
+    })
+    .catch((error) => {
+      console.log(error);
+      fetchCount();
+    });
+
+  fetch("category.json")
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('failed to fetch category.json');
+      }
+    })
+    .then(json => { 
+      categoryJsonItems = json.items;
+      printCategories();
+      fetchCount();
+    })
+    .catch((error) => {
+      console.log(error);
+      fetchCount();
+    });
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,150 @@
+{
+    "module_array": {
+        "607fc9931755a": {
+            "type": "php",
+            "name": "Full Width Template",
+            "file": "module_607fc993173aa",
+            "variable_array": {
+                "6083be0bd613c": {
+                    "name": "menuDatabaseID",
+                    "editor": "text"
+                }
+            }
+        },
+        "6083ba96db569": {
+            "type": "php",
+            "name": "Sidebar Template",
+            "file": "module_6083ba96db39b",
+            "variable_array": {
+                "6083bda7d8caa": {
+                    "name": "menuDatabaseID",
+                    "editor": "text"
+                },
+                "6083ddb10d666": {
+                    "name": "share",
+                    "editor": "text"
+                },
+                "6083ddbd5c9b1": {
+                    "name": "categories",
+                    "editor": "text"
+                },
+                "6083ddc2d1402": {
+                    "name": "tags",
+                    "editor": "text"
+                }
+            }
+        },
+        "6083f6cdaa8fd": {
+            "type": "php",
+            "name": "Display Posts",
+            "file": "module_6083f6cda7985",
+            "variable_array": {
+                "6083f6e236330": {
+                    "name": "limit",
+                    "editor": "text"
+                }
+            }
+        },
+        "60846f2924760": {
+            "type": "php",
+            "name": "DB to CTAs",
+            "file": "module_60846f2922280",
+            "variable_array": {
+                "60846f695febb": {
+                    "name": "databaseID",
+                    "editor": "text"
+                },
+                "60846fb6756cb": {
+                    "name": "databasePageUrl",
+                    "editor": "text"
+                },
+                "608475b759239": {
+                    "name": "titleVar",
+                    "editor": "text"
+                },
+                "608475cb917ad": {
+                    "name": "descriptionVar",
+                    "editor": "text"
+                },
+                "608475df25632": {
+                    "name": "linkText",
+                    "editor": "text"
+                },
+                "6084bbc39a60c": {
+                    "name": "imageUrlVar",
+                    "editor": "text"
+                },
+                "6084c2069a109": {
+                    "name": "imageAltTextVar",
+                    "editor": "text"
+                }
+            }
+        },
+        "60847c6236200": {
+            "type": "php",
+            "name": "Amp Youtube",
+            "file": "module_60847c6231415",
+            "variable_array": {
+                "60847cde15da1": {
+                    "name": "youtubeID",
+                    "editor": "text"
+                },
+                "60847f2671bc9": {
+                    "name": "maxWidth",
+                    "editor": "text"
+                },
+                "60847f2e4e1c5": {
+                    "name": "widthRatio",
+                    "editor": "text"
+                },
+                "60847f3729110": {
+                    "name": "heightRatio",
+                    "editor": "text"
+                }
+            }
+        },
+        "60847c6e65473": {
+            "type": "php",
+            "name": "Amp Image",
+            "file": "module_60847c6e63a87",
+            "variable_array": {
+                "6084965464318": {
+                    "name": "imageURL",
+                    "editor": "image"
+                },
+                "6084b0109f7d1": {
+                    "name": "altText",
+                    "editor": "text"
+                }
+            }
+        },
+        "608495ea0a887": {
+            "type": "php",
+            "name": "Amp Social Share",
+            "file": "module_608495ea0869c"
+        },
+        "608495f24bb61": {
+            "type": "html",
+            "name": "CTA Template",
+            "file": "module_608495f24a231",
+            "variable_array": {
+                "6084b2b5b2d10": {
+                    "name": "title",
+                    "editor": "text"
+                },
+                "6084b2c453fc0": {
+                    "name": "description",
+                    "editor": "text"
+                },
+                "6084b2e335c08": {
+                    "name": "buttonLink",
+                    "editor": "text"
+                },
+                "6084b2ebc0fb9": {
+                    "name": "buttonText",
+                    "editor": "text"
+                }
+            }
+        }
+    }
+}
