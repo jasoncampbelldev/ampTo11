@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Admin"
-AuthUserFile "/home/jtcart5/.htpasswds/public_html/ampTo11/admin/passwd"
-require valid-user
