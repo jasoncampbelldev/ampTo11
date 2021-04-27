@@ -352,7 +352,7 @@ if ($_GET["function"]) {
 					echo '<div id="elementContent' . $elementId . '" class="elementContent">';
 					if ($element['type'] == "module") {
 						$moduleName = New moduleName($element['moduleId']);
-						echo '<p class="moduleName">Module Name: <strong>' . $moduleName->get_name() . '</strong></p>';
+						echo '<p class="moduleName">Module: <strong><a href="edit_module.php?id=' . $element['moduleId'] . '" target="_blank">' . $moduleName->get_name() . '</a></strong></p>';
 					} else {
 						echo strip_tags($element['content']);
 					}

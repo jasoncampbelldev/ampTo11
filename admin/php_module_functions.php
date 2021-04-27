@@ -167,6 +167,8 @@ function tagList($vars) {
 
 }
 
+
+
 function categoryList($vars) {
 
 	$content = $vars['%content%'];
@@ -186,36 +188,7 @@ function categoryList($vars) {
 	$collect = '<div class="categoryList">';
 	$collect .= $content;
 	$collect .= '<ul class="categoryParent">';
-	function printCategory($array,$parentId,$curLevel,$categoryPageUrl) {
-		$collectList;
-		$curLevel++;
-		$listCount = 0;
 
-		foreach ($array as $key => $row) {
-			if ($row['parentId'] == $parentId) {
-				$listCount++;
-			}
-		}
-
-		$count = 0;
-		foreach ($array as $key => $row) {
-			if ($row['parentId'] == $parentId) {
-				$count++;
-				if ($curLevel > 1 && $count == 1) {
-					$collectList .= '<ul class="categoryChildren">';
-				}
-				$collectList .= "<li>";
-			    $collectList .= '<a href="' . $GLOBALS['urlBase'] . '/' . $categoryPageUrl . '?category=' . $row['url'] . '">' . $row['name'] . '</a>';
-			    $collectList .= "</li>\n";
-				$collectList .= printCategory($array,$key,$curLevel,$categoryPageUrl);
-				if ($curLevel > 1 && $count == $listCount) {
-					$collectList .=  "</ul>\n";
-				}
-			}
-		}
-		return $collectList;
-
-	}
 	$collect .= printCategory($categories,$parentCategoryId,0,$categoryPageUrl);
 
 	$collect .= $GLOBALS['collectList'];
@@ -225,6 +198,38 @@ function categoryList($vars) {
 	return $collect;	
 
 }
+// function for categoryList() because functions inside functions cause error in All Page Publish
+function printCategory($array,$parentId,$curLevel,$categoryPageUrl) {
+	$collectList;
+	$curLevel++;
+	$listCount = 0;
+
+	foreach ($array as $key => $row) {
+		if ($row['parentId'] == $parentId) {
+			$listCount++;
+		}
+	}
+
+	$count = 0;
+	foreach ($array as $key => $row) {
+		if ($row['parentId'] == $parentId) {
+			$count++;
+			if ($curLevel > 1 && $count == 1) {
+				$collectList .= '<ul class="categoryChildren">';
+			}
+			$collectList .= "<li>";
+		    $collectList .= '<a href="' . $GLOBALS['urlBase'] . '/' . $categoryPageUrl . '?category=' . $row['url'] . '">' . $row['name'] . '</a>';
+		    $collectList .= "</li>\n";
+			$collectList .= printCategory($array,$key,$curLevel,$categoryPageUrl);
+			if ($curLevel > 1 && $count == $listCount) {
+				$collectList .=  "</ul>\n";
+			}
+		}
+	}
+	return $collectList;
+
+}
+
 
 function dbToCTAs($vars) {
 

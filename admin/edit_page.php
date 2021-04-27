@@ -281,35 +281,26 @@ if ($_GET["id"]) {
 						<p class="error"></p>
 					</form>
 
-					<form id="pageTitleForm" class="basicForm" method="POST" autocomplete="off">
+					<hr style="max-width: 335px;">
+
+					<form id="pageSeoForm" class="basicForm" method="POST" autocomplete="off">
 						<div class="formElement">
 							<label for="pageSeoTitle">Title</label>
 							<input id="pageSeoTitle" type="text" name="seoTitle" placeholder="Title" value="<?php echo $page->get_seoTitle() ?>" required>
 						</div>
-						<input type="hidden" name="fileName" value="<?php echo $page->get_file() ?>">
-						<input type="hidden" name="function" value="updatePageSeoTitle">
-						<input type="submit" value="Update">
-						<p class="error"></p>
-					</form>
-
-					<form id="pageDescriptionForm" class="basicForm" method="POST" autocomplete="off">
+						<br>
 						<div class="formElement">
 							<label for="pageSeoDescription">Description</label>
-							<textarea id="pageSeoDescription" name="seoDescription" placeholder="Description" required><?php echo $page->get_seoDescription() ?></textarea>
+							<textarea id="pageSeoDescription" name="seoDescription" placeholder="Description"><?php echo $page->get_seoDescription() ?></textarea>
 						</div>
-						<input type="hidden" name="fileName" value="<?php echo $page->get_file() ?>">
-						<input type="hidden" name="function" value="updatePageSeoDescription">
-						<input type="submit" value="Update">
-						<p class="error"></p>
-					</form>
-
-					<form id="pagePubDateForm" class="basicForm" method="POST" autocomplete="off">
+						<br>
 						<div class="formElement">
 							<label for="pagePubDate">Publish Date</label>
-							<input id="pagePubDate" class="datePicker" type="text" name="pubDate" placeholder="Publish Date" value="<?php echo $page->get_pubDate() ?>" required>
+							<input id="pagePubDate" class="datePicker" type="text" name="pubDate" placeholder="Publish Date" value="<?php echo $page->get_pubDate() ?>">
 						</div>
+						<br><br>
 						<input type="hidden" name="fileName" value="<?php echo $page->get_file() ?>">
-						<input type="hidden" name="function" value="updatePagePubDate">
+						<input type="hidden" name="function" value="updatePageSeo">
 						<input type="submit" value="Update">
 						<p class="error"></p>
 					</form>

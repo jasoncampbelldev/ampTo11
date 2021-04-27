@@ -20,7 +20,7 @@ img.pencilEditIcon { height: 20px; margin-left: 10px; }
 img.newTabIcon { height: 20px; margin-bottom: 3px; }
 form.nameChange, form.typeChange { display: none; }
 label { display: block; padding: 5px 0; font-weight: bold; font-size: .9em;}
-input { border-radius: 5px; border: solid 1px #8a8a8a; padding: 5px; }
+input, textarea { border-radius: 5px; border: solid 1px #8a8a8a; padding: 5px; }
 input[type="submit"].blockSubmit { display: block; margin: 20px 0; }
 input[type="text"].longInput { max-width: 98%; width: 600px; }
 textarea.bigTextArea { max-width: 98%; width: 600px; height: 300px; }

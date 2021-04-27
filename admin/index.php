@@ -43,6 +43,11 @@ require 'classes.php';
 
 	<div id="dialog"></div>
 
+	<?php $settings = new Settings(); ?>
+	<?php if ($settings->get_urlBase() == "") { ?>
+		<p class="warningBanner">Don't forget to add your <a class="toggleSectionsLink" href="javascript:;" data-section="settings">URL Base</a> before you export!</p>
+	<?php } ?>
+
 	<div class="wrapper">
 		<section id="pages" class="toggleSections active">
 
@@ -266,6 +271,11 @@ require 'classes.php';
 			<h2>Exports</h2>
 
 			<div>
+				<a id="exportPublishAllPages" class="button" href="javascript:;">Publish All Pages</a>
+				<p class="status"></p>
+			</div>
+
+			<div>
 				<a id="exportTagJSON" class="button" href="javascript:;">Tag JSON</a>
 				<p class="status"></p>
 			</div>
@@ -291,8 +301,6 @@ require 'classes.php';
 		<section id="settings" class="toggleSections">
 
 			<h2>Settings</h2>
-
-			<?php $settings = new Settings(); ?>
 
 			<form id="urlBaseForm" class="basicForm" method="POST" autocomplete="off">
 				<div class="formElement">
@@ -364,9 +372,6 @@ require 'classes.php';
 		</section>
 
 
-		<?php if ($settings->get_urlBase() == "") { ?>
-			<p class="warningBanner">Don't forget to add your <a class="toggleSectionsLink" href="javascript:;" data-section="settings">URL Base</a> before you export!</p>
-		<?php } ?>
 
 	</div>
 

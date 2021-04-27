@@ -90,7 +90,7 @@ if($_POST["function"]) {
 
 	}
 
-	if($functionName == "updatePageSeoTitle") {
+	if($functionName == "updatePageSeo") {
 
 		if($_POST["fileName"]) {
 			$fileName = $_POST["fileName"];
@@ -101,15 +101,7 @@ if($_POST["function"]) {
 			} else {
 				echo "Error: Could not update SEO Title ";
 			}
-		} else {
-			echo "Error: File name cannot be blank ";
-		}
-	}
 
-	if($functionName == "updatePageSeoDescription") {
-
-		if($_POST["fileName"]) {
-			$fileName = $_POST["fileName"];
 			$seoDescription = $_POST["seoDescription"];
 			$result = setProperty($fileName,"seoDescription",$seoDescription);
 			if ($result['status']) {
@@ -117,15 +109,7 @@ if($_POST["function"]) {
 			} else {
 				echo "Error: Could not update SEO Description ";
 			}
-		} else {
-			echo "Error: File name cannot be blank ";
-		}
-	}
 
-	if($functionName == "updatePagePubDate") {
-
-		if($_POST["fileName"]) {
-			$fileName = $_POST["fileName"];
 			$pubDate = $_POST["pubDate"];
 			$result = setProperty($fileName,"pubDate",$pubDate);
 			if ($result['status']) {
@@ -133,6 +117,7 @@ if($_POST["function"]) {
 			} else {
 				echo "Error: Could not update Publish Date ";
 			}
+
 		} else {
 			echo "Error: File name cannot be blank ";
 		}

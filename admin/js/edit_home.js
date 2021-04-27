@@ -391,6 +391,17 @@ $("#sortDatabaseForm").submit( function(e) {
 
 // export listeners
 
+$("#exportPublishAllPages").click( function() {
+	var statusP = $(this).parent().find('.status');
+	$.get('./functions_preview_publish.php?function=publishAllPages', function(data, status){
+		var status = '<span class="error">Could not publish. Try again.</span>';
+		if (data !== "") {
+			status = '<span class="success">All Pages Published</span>';
+		}
+		statusP.hide().html(status).fadeIn();
+	});
+});
+
 $("#exportTagJSON").click( function() {
 	var url = "tag.json";
 	var statusP = $(this).parent().find('.status');

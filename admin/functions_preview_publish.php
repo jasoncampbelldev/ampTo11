@@ -14,7 +14,6 @@ if ($_GET["function"]) {
 	$functionName = $_GET["function"];
 
 	if ($functionName == "printPreview") {
-
 		$id = $_GET["editId"];
 		$type = $_GET["editType"];
 		$dbEntry = $_GET["dbEntry"];
@@ -27,39 +26,50 @@ if ($_GET["function"]) {
 		echo $html;
 	}
 
-
 	if ($functionName == "publishPage") {
-
 		$id = $_GET["pageId"];
-		$preview = false;
-		$page = new Page($id);
-		$page->publish_elements();
-		$page->set_modDate();
-		$result;
-		if ( $page->get_type() == "database_template") {
-			$databaseId = $page->get_database();
-			$database = new Database($databaseId);
-			$entries = $database->get_entries();
-			$pageUrl = $page->get_id();
-			if ( $page->get_url() ) {
-				$pageUrl = $page->get_url();
+		publishPage($id);
+	}
+
+	if ($functionName == "publishAllPages") {
+		$result = getTableRows("pages","page_array");
+		if ($result['status']) {
+			foreach ($result['data'] as $pageKey => $page) {
+				publishPage($pageKey);
 			}
-			foreach ( $entries as $entry_key => $entry ) {
-				$url = $pageUrl . "-" . $entry_key;
-				if ( $entry['url'] ) {
-					$url = $pageUrl . "-" . $entry['url'];
-				}
-				$result = exportPage($id,$url,$entry_key);
-			}
-		} else {
-			$url = $page->get_id();
-			if ( $page->get_url() ) {
-				$url = $page->get_url();
-			}
-			$result = exportPage($id,$url,"");
 		}
 	}
 
+}
+
+function publishPage($id){
+	$preview = false;
+	$page = new Page($id);
+	$page->publish_elements();
+	$page->set_modDate();
+	$result;
+	if ( $page->get_type() == "database_template") {
+		$databaseId = $page->get_database();
+		$database = new Database($databaseId);
+		$entries = $database->get_entries();
+		$pageUrl = $page->get_id();
+		if ( $page->get_url() ) {
+			$pageUrl = $page->get_url();
+		}
+		foreach ( $entries as $entry_key => $entry ) {
+			$url = $pageUrl . "-" . $entry_key;
+			if ( $entry['url'] ) {
+				$url = $pageUrl . "-" . $entry['url'];
+			}
+			$result = exportPage($id,$url,$entry_key);
+		}
+	} else {
+		$url = $page->get_id();
+		if ( $page->get_url() ) {
+			$url = $page->get_url();
+		}
+		$result = exportPage($id,$url,"");
+	}	
 }
 
 
