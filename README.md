@@ -1,5 +1,5 @@
 # ampTo11
-A simple CMS that uses JSON files for a database and outputs static content. Designed for AMP pages but can be used for any type of web page. 
+A simple CMS that uses JSON files for a database and outputs static content. Designed for AMP pages but can be used for regular web pages too. 
 
 ## Quick Start Guide
 1. Drop "admin" and "images" folders into your root directory or folder.
