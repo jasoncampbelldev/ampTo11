@@ -393,6 +393,7 @@ $("#sortDatabaseForm").submit( function(e) {
 
 $("#exportPublishAllPages").click( function() {
 	var statusP = $(this).parent().find('.status');
+	statusP.hide().html("Publishing...").fadeIn();
 	$.get('./functions_preview_publish.php?function=publishAllPages', function(data, status){
 		var status = '<span class="error">Could not publish. Try again.</span>';
 		if (data !== "") {
@@ -405,6 +406,7 @@ $("#exportPublishAllPages").click( function() {
 $("#exportTagJSON").click( function() {
 	var url = "tag.json";
 	var statusP = $(this).parent().find('.status');
+	statusP.hide().html("Exporting...").fadeIn();
 	$.get('./functions_exports.php?function=exportTagJSON&url=' + url, function(data, status){
 		var status = '<span class="error">Could not export. Try again.</span>';
 		if (data !== "") {
@@ -417,6 +419,7 @@ $("#exportTagJSON").click( function() {
 $("#exportCategoryJSON").click( function() {
 	var url = "category.json";
 	var statusP = $(this).parent().find('.status');
+	statusP.hide().html("Exporting...").fadeIn();
 	$.get('./functions_exports.php?function=exportCategoryJSON&url=' + url, function(data, status){
 		var status = '<span class="error">Could not export. Try again.</span>';
 		if (data !== "") {
@@ -429,6 +432,7 @@ $("#exportCategoryJSON").click( function() {
 $("#exportPageJSON").click( function() {
 	var url = "page.json";
 	var statusP = $(this).parent().find('.status');
+	statusP.hide().html("Exporting...").fadeIn();
 	$.get('./functions_exports.php?function=exportPageJSON&url=' + url, function(data, status){
 		var status = '<span class="error">Could not export. Try again.</span>';
 		if (data !== "") {
@@ -441,6 +445,7 @@ $("#exportPageJSON").click( function() {
 $("#exportSiteMap").click( function() {
 	var url = "sitemap.xml";
 	var statusP = $(this).parent().find('.status');
+	statusP.hide().html("Exporting...").fadeIn();
 	$.get('./functions_exports.php?function=exportSiteMap&url=' + url, function(data, status){
 		var status = '<span class="error">Could not export. Try again.</span>';
 		if (data !== "") {
