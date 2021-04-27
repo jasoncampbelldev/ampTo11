@@ -13,3 +13,7 @@ The content editor is element based so your HTML stays minimal and clean.
 7. Enjoy codeing!
 
 Note: PHP module functions are located in admin/php_module_functions.php
+
+## Page Editor
+
+![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/page-editor.jpg)
