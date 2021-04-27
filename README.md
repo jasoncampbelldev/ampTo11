@@ -12,3 +12,4 @@ The content editor is element based so your HTML stays minimal and clean.
 6. Go to the "URL Base" to see the demo site. 
 7. Enjoy codeing!
 
+Note: PHP module functions are located in admin/php_module_functions.php
