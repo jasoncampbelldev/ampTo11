@@ -14,6 +14,8 @@ The content editor is element based so your HTML stays minimal and clean.
 
 Note: PHP module functions are located in admin/php_module_functions.php
 
+---
+
 ## Page Editor
 
 ![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/page-editor.jpg)
@@ -25,12 +27,16 @@ Note: PHP module functions are located in admin/php_module_functions.php
 - Add inline CSS or JS (not recommended for AMP pages).
 - Add taxonamy for post type pages.
 
+---
+
 ## HTML Module Editor
 
 ![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/html-module-edit.jpg)
 
 - Use HTML elements to form your module.
 - Add variables and add them to your content using handlebar. syntax *example: {{first_name}}*
+
+---
 
 ## PHP Module Editor
 
@@ -43,6 +49,8 @@ Note: PHP module functions are located in admin/php_module_functions.php
   
     ``function example($vars) { return "<p>" . $vars['first_name'] . "</p> <div>" . $vars['%content%'] . "</div>"; }``
 
+---
+
 ## Database Editor
 
 ![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/database-editor.jpg)
@@ -51,9 +59,13 @@ Note: PHP module functions are located in admin/php_module_functions.php
 - Order the database by a field.
 - The field "url" is added automatically and doesn't allow duplicates. (this can be deleted and readded)
 
+---
+
 ## Database Add Entry
 
 ![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/database-add-entry.jpg)
+
+---
 
 ## Database Page Template Editor
 
@@ -63,6 +75,8 @@ Note: PHP module functions are located in admin/php_module_functions.php
 - Use handlebar notation to add database fields to the template. *example: {{first_name}}*
 - All of the pages can be toggled in the preview iframe.
 
+---
+
 ## Image Admin
 
 ![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/image-admin.jpg)
@@ -70,6 +84,10 @@ Note: PHP module functions are located in admin/php_module_functions.php
 - Upload multi images to create various image sizes. *Note: this is very basic so there isn't a progress bar or anything at this time*
 - Or upload to the "images" file through FTP and click the "Generate Sizes" button to generate various sizes.
 - If you have a lot of images the second method would be best
+
+---
+
+---
 
 __This is meant to be a jumping off point. Hopefully you can customize the code to fit your needs.__
 
