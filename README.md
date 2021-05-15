@@ -42,7 +42,7 @@ Note: PHP module functions are located in admin/php_module_functions.php
 - The child HTML content of the module comes in the variable "%content%". *example: $vars['%content%']*
   
     ``function example($vars) {
-      ``return '<p>' . $vars['first_name'] . '</p><div>' . $vars['%content%'] . '</div>';``
+      ``return "<p>" . $vars['first_name'] . "</p> <div>" . $vars['%content%'] . "</div>";``
     ``}``
 
 ## Database Editor
