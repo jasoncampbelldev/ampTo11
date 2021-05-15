@@ -40,12 +40,13 @@ Note: PHP module functions are located in admin/php_module_functions.php
 - Add the function to admin/php_module_functions.php (refer to the premade functions for examples).
 - Add variables that will be passed into the function through the module.
 - The child HTML content of the module comes in the variable "%content%". *example: $vars['%content%']*
-  function example($vars) {
-      return '
-        <p>' . $vars['first_name'] . '</p>
-        <div>'. $vars['%content%'] .'</div>
-      ';
-  }
+  
+    function example($vars) {
+        return '
+          <p>' . $vars['first_name'] . '</p>
+          <div>'. $vars['%content%'] .'</div>
+        ';
+    }
 
 ## Database Editor
 
@@ -53,7 +54,7 @@ Note: PHP module functions are located in admin/php_module_functions.php
 
 - Add Database fields and entries.
 - Order the database by a field.
-- URL is added automatically and doesn't allow duplicates. (this can be deleted and readded)
+- The field "url" is added automatically and doesn't allow duplicates. (this can be deleted and readded)
 
 ## Database Add Entry
 
