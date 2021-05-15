@@ -17,3 +17,29 @@ Note: PHP module functions are located in admin/php_module_functions.php
 ## Page Editor
 
 ![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/page-editor.jpg)
+
+## HTML Module Editor
+
+![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/html-module-edit.jpg)
+
+## PHP Module Editor
+
+![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/php-module-edit.jpg)
+
+## Database Editor
+
+![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/database-editor.jpg)
+
+## Database Add Entry
+
+![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/database-add-entry.jpg)
+
+## Database Page Template Editor
+
+![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/db-page-editor.jpg)
+
+## Image Admin
+
+![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/image-admin.jpg)
+
+
