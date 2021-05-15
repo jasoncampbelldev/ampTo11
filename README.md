@@ -41,9 +41,7 @@ Note: PHP module functions are located in admin/php_module_functions.php
 - Add variables that will be passed into the function through the module.
 - The child HTML content of the module comes in the variable "%content%". *example: $vars['%content%']*
   
-    ``function example($vars) {
-      ``return "<p>" . $vars['first_name'] . "</p> <div>" . $vars['%content%'] . "</div>";``
-    ``}``
+    ``function example($vars) { return "<p>" . $vars['first_name'] . "</p> <div>" . $vars['%content%'] . "</div>"; }``
 
 ## Database Editor
 
