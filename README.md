@@ -1,4 +1,4 @@
-![AMPto11 logo](https://jasoncampbelldev.github.io/portfolio/screen-shots/ampTo11-logo.png]
+![AMPto11 logo](https://jasoncampbelldev.github.io/portfolio/screen-shots/ampTo11-logo.png)
 
 A simple CMS that uses JSON files for a database (noSQL style) and outputs static content. 
 It is designed for AMP pages but can be used for regular web pages too. 
