@@ -1,9 +1,10 @@
 ![AMPto11 logo](https://jasoncampbelldev.github.io/portfolio/screen-shots/ampTo11-logo.png)
 
-A simple CMS that uses JSON files for a database (noSQL style) and outputs static content. 
+A simple CMS that uses JSON files for a database and outputs static content.
+Drop it onto any PHP host and use it immediately.
 It is designed for AMP pages but can be used for regular web pages too. 
 The content editor is element based so your HTML stays minimal and clean.
-The CMS also features databases and database templates to make database sites easy.
+The CMS also features databases and database page templates to make database sites easy.
 
 [Demo Site](http://jtc-art.com/ampTo11-demo/)
 
