@@ -3,6 +3,8 @@ A simple CMS that uses JSON files for a database and outputs static content.
 It is designed for AMP pages but can be used for regular web pages too. 
 The content editor is element based so your HTML stays minimal and clean.
 
+[Demo Site]http://jtc-art.com/ampTo11-demo/
+
 ## Quick Start Guide
 1. Drop "admin" and "images" folders into your root directory or folder.
 2. Password protect "admin" folder (rename folder for extra security)
@@ -13,6 +15,10 @@ The content editor is element based so your HTML stays minimal and clean.
 7. Enjoy codeing!
 
 Note: PHP module functions are located in admin/php_module_functions.php
+
+## Lighthouse Score
+
+![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/lighthouse-score.jpg)
 
 ---
 
@@ -31,7 +37,7 @@ Note: PHP module functions are located in admin/php_module_functions.php
 
 ## HTML Module Editor
 
-![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/html-module-edit.jpg)
+![Image of HTML module editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/html-module-edit.jpg)
 
 - Use HTML elements to form your module.
 - Add variables and add them to your content using handlebar. syntax *example: {{first_name}}*
@@ -40,7 +46,7 @@ Note: PHP module functions are located in admin/php_module_functions.php
 
 ## PHP Module Editor
 
-![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/php-module-edit.jpg)
+![Image of PHP function module editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/php-module-edit.jpg)
 
 - Use a PHP function as a module
 - Add the function to admin/php_module_functions.php (refer to the premade functions for examples).
@@ -53,7 +59,7 @@ Note: PHP module functions are located in admin/php_module_functions.php
 
 ## Database Editor
 
-![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/database-editor.jpg)
+![Image of database editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/database-editor.jpg)
 
 - Add Database fields and entries.
 - Order the database by a field.
@@ -63,13 +69,13 @@ Note: PHP module functions are located in admin/php_module_functions.php
 
 ## Database Add Entry
 
-![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/database-add-entry.jpg)
+![Image of adding an entry to database](https://jasoncampbelldev.github.io/portfolio/screen-shots/database-add-entry.jpg)
 
 ---
 
 ## Database Page Template Editor
 
-![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/db-page-editor.jpg)
+![Image of database page template editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/db-page-editor.jpg)
 
 - Create a database page template using elements and modules.
 - Use handlebar notation to add database fields to the template. *example: {{first_name}}*
@@ -79,7 +85,7 @@ Note: PHP module functions are located in admin/php_module_functions.php
 
 ## Image Admin
 
-![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/image-admin.jpg)
+![Image of image admin](https://jasoncampbelldev.github.io/portfolio/screen-shots/image-admin.jpg)
 
 - Upload multi images to create various image sizes. *Note: this is very basic so there isn't a progress bar or anything at this time*
 - Or upload to the "images" file through FTP and click the "Generate Sizes" button to generate various sizes.
