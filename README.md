@@ -1,4 +1,5 @@
-# ampTo11
+![AMPto11 logo](https://jasoncampbelldev.github.io/portfolio/screen-shots/ampTo11-logo.png]
+
 A simple CMS that uses JSON files for a database (noSQL style) and outputs static content. 
 It is designed for AMP pages but can be used for regular web pages too. 
 The content editor is element based so your HTML stays minimal and clean.
@@ -20,6 +21,10 @@ Note: PHP module functions are located in admin/php_module_functions.php
 ## Lighthouse Score
 
 ![Image of page editor](https://jasoncampbelldev.github.io/portfolio/screen-shots/lighthouse-score.jpg)
+
+---
+
+# Basic Documentation
 
 ---
 
